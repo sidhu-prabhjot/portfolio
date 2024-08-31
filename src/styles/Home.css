@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/star-wars");
+
+* {
+  font-family: "Star Wars", sans-serif;
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../assets/background_home.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Pseudo-element to darken the background image */
+.main-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the rgba values to control the darkness */
+  z-index: 1; /* Ensure this layer is on top of the background image but below content */
+}
+
+/* Adjust the z-index of the content to ensure it is above the pseudo-element */
+.header-container,
+.astronaut-planet-image-container,
+.glowing-planet-container,
+.click-to-open-container,
+.dock-container {
+  position: relative;
+  z-index: 2; /* Ensure content is above the dark overlay */
+}
+
+/* Container to position the image at the bottom */
+.astronaut-planet-image-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* Hide the part of the image that goes beyond the container */
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Style for the image */
+.astronaut-planet-image-container img {
+  height: auto;
+}
+
+.glowing-planet-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header-container {
+  display: flex;
+  flex: 5;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0px 0px 0px;
+}
+
+.click-to-open-container {
+  display: flex;
+  flex: 2;
+}
+
+.dock-container {
+  display: flex;
+  padding: 0px 0px 24px 0px;
+}
+
+.left-dock-container {
+  z-index: 2;
+}
+
+.neon-glow-text {
+  color: #1f132f; /* Dark color for the text */
+  text-shadow: 0 0 1px #b377ff,
+    /* Small, subtle shadow for a sharp glow */ 0 0 3px #b377ff,
+    /* Medium shadow for the main glow */ 0 0 6px #b377ff,
+    /* Larger shadow for an extended glow */ 0 0 9px #b377ff; /* Even larger shadow for a more intense glow */
+}
+
+.normal-text {
+  color: #e7d6fc; /* Dark color for the text */
+}
+
+.greeting-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px 24px 0px;
+}
+
+.greeting-title-text {
+  font-size: 44px;
+}
+
+.name-text {
+  font-size: 88px;
+}
+
+.greeting-sub-text {
+  font-size: 20px;
+}
+
+.greeting-top-title-text {
+  margin: 0px 0px 0px 24px;
+}
+
+.greeting-bottom-title-text {
+  margin: 0px 24px 0px 0px;
+}
+
+.greeting-rectangle {
+  flex: 1;
+  height: 40px; /* Adjust height as needed */
+  background: transparent; /* Dark color for the center */
+  border: 5px solid #7844bc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(127, 17, 224, 0.7), 0 0 20px rgba(127, 17, 224, 0.7); /* Neon glow effect */
+}
+
+.click-to-open-text {
+  text-align: center;
+  font-size: 28px;
+  color: #ace8ff; /* Dark color for the text */
+  text-shadow: 0 0 1px #b377ff,
+    /* Small, subtle shadow for a sharp glow */ 0 0 3px #b377ff,
+    /* Medium shadow for the main glow */ 0 0 6px #b377ff,
+    /* Larger shadow for an extended glow */ 0 0 9px #b377ff; /* Even larger shadow for a more intense glow */
+  background: transparent; /* Dark color for the center */
+  border: 5px solid #caf0ff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(202, 240, 255, 0.7),
+    0 0 20px rgba(202, 240, 255, 0.7); /* Neon glow effect */
+  padding: 32px 20px 32px 20px;
+}
