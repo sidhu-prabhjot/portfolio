@@ -5,7 +5,7 @@
   font-family: "Star Wars", sans-serif;
 }
 
-.main-container {
+.home-main-container {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -36,10 +36,10 @@
 }
 
 /* Adjust the z-index of the content to ensure it is above the pseudo-element */
-.header-container,
+.home-header-container,
 .astronaut-planet-image-container,
 .glowing-planet-container,
-.click-to-open-container,
+.home-click-to-open-container,
 .dock-container {
   position: relative;
   z-index: 2; /* Ensure content is above the dark overlay */
@@ -67,7 +67,7 @@
   justify-content: center;
 }
 
-.header-container {
+.home-header-container {
   display: flex;
   flex: 5;
   flex-direction: column;
@@ -75,7 +75,7 @@
   margin: 50px 0px 0px 0px;
 }
 
-.click-to-open-container {
+.home-click-to-open-container {
   display: flex;
   flex: 2;
 }
@@ -89,7 +89,7 @@
   z-index: 2;
 }
 
-.neon-glow-text {
+.home-neon-glow-text {
   color: #1f132f; /* Dark color for the text */
   text-shadow: 0 0 1px #b377ff,
     /* Small, subtle shadow for a sharp glow */ 0 0 3px #b377ff,
@@ -97,47 +97,47 @@
     /* Larger shadow for an extended glow */ 0 0 9px #b377ff; /* Even larger shadow for a more intense glow */
 }
 
-.normal-text {
+.home-normal-text {
   color: #e7d6fc; /* Dark color for the text */
 }
 
-.greeting-title-container {
+.home-greeting-title-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0px 0px 24px 0px;
 }
 
-.greeting-title-text {
+.home-greeting-title-text {
   font-size: 44px;
 }
 
-.name-text {
+.home-name-text {
   font-size: 88px;
 }
 
-.greeting-sub-text {
+.home-greeting-sub-text {
   font-size: 20px;
 }
 
-.greeting-top-title-text {
+.home-greeting-top-title-text {
   margin: 0px 0px 0px 24px;
 }
 
-.greeting-bottom-title-text {
+.home-greeting-bottom-title-text {
   margin: 0px 24px 0px 0px;
 }
 
-.greeting-rectangle {
+.home-greeting-rectangle {
   flex: 1;
-  height: 40px; /* Adjust height as needed */
+  height: 20px; /* Adjust height as needed */
   background: transparent; /* Dark color for the center */
-  border: 5px solid #7844bc;
+  border: 3px solid #7844bc;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(127, 17, 224, 0.7), 0 0 20px rgba(127, 17, 224, 0.7); /* Neon glow effect */
 }
 
-.click-to-open-text {
+.home-click-to-open-text {
   text-align: center;
   font-size: 28px;
   color: #ace8ff; /* Dark color for the text */
@@ -146,7 +146,7 @@
     /* Medium shadow for the main glow */ 0 0 6px #b377ff,
     /* Larger shadow for an extended glow */ 0 0 9px #b377ff; /* Even larger shadow for a more intense glow */
   background: transparent; /* Dark color for the center */
-  border: 5px solid #caf0ff;
+  border: 3px solid #caf0ff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(202, 240, 255, 0.7),
     0 0 20px rgba(202, 240, 255, 0.7); /* Neon glow effect */
