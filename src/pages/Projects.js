@@ -3,11 +3,7 @@ import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid2";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
 //styling
 import "../styles/Projects.css";
@@ -239,42 +235,53 @@ const Projects = () => {
       title: "Perimeter Institute Subtitle Editor",
       summary:
         "This tool is designed for efficient subtitle management and editing. It supports SRT and VTT subtitle formats, as well as an app-specific JSON file for additional functionality. The editor displays all subtitles along with their individual data, allowing users to view and manage them effectively. It also includes a feature for uploading the corresponding video to synchronize subtitles and make necessary edits.",
+      tags: ["#React.js", "#TypeScript", "#HTML", "#CSS", "#JavaScript"],
+      displayLiveProject: true,
     },
     {
       image: sentimentClassifierImage,
-      title: "ML Sentiment Classifer",
+      title: "ML Sentiment Classifier",
       summary:
-        "This application enables users to upload text that expresses sentiment, and utilizes a trained sentiment classification language model to analyze the text. It determines whether the sentiment conveyed is positive or negative, providing clear insights into the emotional tone of the input.",
+        "This application enables users to upload text that expresses sentiment, and utilizes a self-trained sentiment classification language model to analyze the text. It determines whether the sentiment conveyed is positive or negative, providing clear insights into the emotional tone of the input.",
+      tags: ["#Python", "#PyTorch", "React.js", "#HTML", "#CSS", "#JavaScript"],
+      displayLiveProject: true,
     },
     {
       image: prabhjotWeatherImage,
       title: "Weather Application",
       summary:
         "This versatile weather application offers comprehensive daily weather information, including hourly forecasts, UV index, and precipitation levels. Users can easily search for weather updates in various cities and switch between imperial and metric systems. The app supports both dark mode and light mode for personalized viewing preferences. Additionally, it provides detailed insights into other relevant weather indexes, ensuring users stay well-informed about current and forecasted conditions.",
+      tags: ["#REST API", "#HTML", "#CSS", "#JavaScript"],
+      displayLiveProject: true,
     },
     {
       image: kungFu,
       title: "Kung-Fu A3C Deep Reinforcement Learning",
       summary:
         "This project focuses on training an AI model to play Atari's \"Kung-Fu Master\" using the A3C (Asynchronous Actor-Critic Agents) algorithm within Gymnasium's Atari Kung-Fu Master environment. The model leverages advanced reinforcement learning techniques to improve its gameplay, utilizing asynchronous updates and policy gradient methods to master the game.",
+      tags: ["#Python", "#PyTorch"],
     },
     {
       image: pacman,
       title: "Pac-Man Deep Convolutional Q-Learning",
       summary:
         "This project involves training an AI model to play Atari's \"Pac-Man\" using Deep Convolutional Q-Learning (DQN) within Gymnasium's Atari Pac-Man environment. The model employs deep convolutional neural networks to learn and optimize its gameplay strategies, enhancing its performance through advanced reinforcement learning techniques tailored for the iconic arcade game.",
+      tags: ["#Python", "#PyTorch"],
     },
     {
       image: molecule,
       title: "3D Molecule Viewer",
       summary:
         "This application allows users to upload SDF (Structure Data File) files, which contain detailed information about molecules. The viewer renders these molecules in 3D space, enabling users to explore and examine their structure visually. Users can interact with the 3D model by rotating it to view the molecule from different angles, providing an intuitive and comprehensive way to analyze molecular structures.",
+      tags: ["#Python", "#C", "#HTML", "#CSS", "#JavaScript"],
     },
     {
       image: omnifood,
       title: "Omnifood Website",
       summary:
-        "A premium healthy food delivery service website. It  presents a sleek, modern interface to showcase the company, app, and services. It offers a user-friendly experience where customers can easily explore healthy meal options, view detailed pricing information, and learn about the benefit.",
+        "A premium healthy food delivery service website. It  presents a sleek, modern interface to showcase the company, app, and services. It offers a user-friendly experience where customers can easily explore healthy meal options, view detailed pricing information, and learn about the benefits.",
+      tags: ["#React.js", "#HTML", "#CSS", "#JavaScript"],
+      displayLiveProject: true,
     },
   ];
 
@@ -298,7 +305,7 @@ const Projects = () => {
             </div>
             <div>
               <h1 className={"header-text greeting-title-text neon-glow-text"}>
-                here are some projects I have built
+                here are some of my projects
               </h1>
             </div>
             <div
@@ -355,16 +362,21 @@ const Projects = () => {
                   <Item
                     sx={{
                       backgroundColor: "transparent",
-                      margin: "8px 0px 8px 0px",
                     }}
                   >
                     <div className={"project-card-image-container"}>
                       <img
+                        className={"project-card-image"}
                         src={item.image}
                         style={{ height: "250px", width: "auto" }}
                         alt="perimeter institute subtitle editor"
                       />
+                    </div>
+                    <div className={"project-card-text-container"}>
                       <h2
+                        className={
+                          "project-card-text project-card-title-container"
+                        }
                         style={{
                           fontFamily: "roboto, sans-serif",
                           color: "#ffffff",
@@ -373,6 +385,9 @@ const Projects = () => {
                         {item.title}
                       </h2>
                       <h3
+                        className={
+                          "project-card-text project-card-description-container"
+                        }
                         style={{
                           fontFamily: "roboto, sans-serif",
                           color: "#ffffff",
@@ -380,6 +395,26 @@ const Projects = () => {
                       >
                         {item.summary}
                       </h3>
+                      <h3
+                        className={
+                          "project-card-text project-card-tags-container"
+                        }
+                        style={{
+                          fontFamily: "roboto, sans-serif",
+                          color: "#ffffff",
+                          marginTop: "10px",
+                        }}
+                      >
+                        {item.tags.join(" ")}
+                      </h3>
+                    </div>
+                    <div
+                      style={{
+                        display: item.displayLiveProject ? "flex" : "none",
+                      }}
+                      className={"project-card-live-project-button"}
+                    >
+                      <Button variant="outlined">Live Project</Button>
                     </div>
                   </Item>
                 </div>

@@ -85,10 +85,6 @@
   padding: 0px 0px 24px 0px;
 }
 
-.left-dock-container {
-  z-index: 2;
-}
-
 .home-neon-glow-text {
   color: #1f132f; /* Dark color for the text */
   text-shadow: 0 0 1px #b377ff,

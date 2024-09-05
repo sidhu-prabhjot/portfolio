@@ -37,38 +37,18 @@
 
 /* Adjust the z-index of the content to ensure it is above the pseudo-element */
 .header-container,
-.astronaut-standing-planet-image-container,
-.glowing-planet-container,
-.click-to-open-container,
-.dock-container {
+.click-to-open-container {
   position: relative;
   z-index: 3; /* Ensure content is above the dark overlay */
 }
 
+.contact-me-container {
+  position: absolute;
+  z-index: 4;
+}
+
 .page-container {
   overflow: hidden;
-}
-
-/* Container to position the image at the bottom */
-.astronaut-standing-planet-image-container {
-  position: absolute;
-  bottom: -550px;
-  width: 100%;
-  height: auto;
-  overflow: hidden; /* Hide the part of the image that goes beyond the container */
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-}
-
-/* Style for the image */
-.astronaut-standing-planet-image-container img {
-  height: auto;
-}
-
-.glowing-planet-container {
-  display: flex;
-  justify-content: center;
 }
 
 .header-container {
@@ -84,13 +64,6 @@
   flex: 2;
 }
 
-.dock-container {
-  display: flex;
-  padding: 0px 0px 24px 0px;
-  position: absolute;
-  bottom: 0;
-}
-
 .left-dock-container {
   z-index: 2;
 }
@@ -100,21 +73,32 @@
   background-color: transparent;
 }
 
-.full-stack-projects-container {
+.skills-container {
   background-color: transparent;
   position: relative;
   overflow: hidden; /* Ensure particles don’t overflow */
-  padding: 48px 20px 60px 20px;
+  padding: 0px 20px 60px 20px;
+}
+
+.skill-title {
+  margin: 48px 0px 32px 0px;
+  color: #efb6a3;
+}
+
+.skill-card-container {
+  background: rgba(0, 183, 192, 0.1); /* Dark color for the center */
+  border: 3px solid #00b7c0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 183, 192, 0.7), 0 0 20px rgba(0, 183, 192, 0.7); /* Neon glow effect */
+  display: flex;
+  color: #ffffff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .particles {
   z-index: -1;
-}
-
-.project-card-container {
-  display: flex;
-  color: #ffffff;
-  font-family: roboto, sans-serif;
 }
 
 #tsparticles {
@@ -168,9 +152,9 @@
   flex: 1;
   height: 20px; /* Adjust height as needed */
   background: transparent; /* Dark color for the center */
-  border: 3px solid #296d81;
+  border: 3px solid #00b7c0;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 183, 192, 0.7), 0 0 20px rgba(0, 183, 192, 0.7); /* Neon glow effect */
+  box-shadow: 0 0 10px rgba(0, 183, 192, 1), 0 0 20px rgba(0, 183, 192, 1); /* Neon glow effect */
 }
 
 .click-to-open-text {
@@ -186,38 +170,4 @@
   border-radius: 5px;
   box-shadow: 0 0 10px, 0 0 20px rgba(202, 240, 255, 0.7); /* Neon glow effect */
   padding: 32px 20px 32px 20px;
-}
-
-.project-card-container {
-  background: rgba(0, 183, 192, 0.1); /* Dark color for the center */
-  border: 3px solid #00b7c0;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 183, 192, 0.7), 0 0 20px rgba(0, 183, 192, 0.7); /* Neon glow effect */
-  display: flex;
-  color: #ffffff;
-  flex-direction: column;
-  padding: 8px 8px 8px 8px;
-}
-
-.project-card-image-container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  padding: 8px 0px 8px 0px;
-  border-radius: 5px;
-  background-color: #dee7e92d;
-}
-
-.project-card-image {
-  border-radius: 5px;
-}
-
-.project-card-text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.project-card-text {
-  text-align: left;
 }

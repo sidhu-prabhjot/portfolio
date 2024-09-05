@@ -6,196 +6,14 @@ import "../styles/Home.css";
 //images
 import astronautPlanet from "../assets/astronaut_planet.png";
 
-//react router dom
-import { Link } from "react-router-dom";
-
-//fontawesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faLaptop,
-  faStar,
-  faUser,
-  faEnvelope,
-  faScrewdriverWrench,
-} from "@fortawesome/free-solid-svg-icons";
-
-import {
-  faGithub,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-
-//spline
-import Spline from "@splinetool/react-spline";
-
-//prime react
-import { Dock } from "primereact/dock";
+//components
+import NavigationDock from "../components/NavigationDock";
+import SocialDock from "../components/SocialDock";
 
 const Home = () => {
-  const iconColor = "#e7d6fc";
-
-  const navItems = [
-    {
-      label: "Home",
-      icon: () => (
-        <Link to="/" alt="home">
-          <FontAwesomeIcon
-            style={{
-              height: "42px",
-              color: iconColor,
-              margin: "0px 20px 10px 20px",
-            }}
-            icon={faHouse}
-          />
-        </Link>
-      ),
-    },
-    {
-      label: "About",
-      icon: () => (
-        <Link to="/about" alt="about">
-          <FontAwesomeIcon
-            style={{
-              height: "42px",
-              color: iconColor,
-              margin: "0px 20px 10px 20px",
-            }}
-            icon={faUser}
-          />
-        </Link>
-      ),
-    },
-    {
-      label: "Skills",
-      icon: () => (
-        <Link to="/skills" alt="skills">
-          <FontAwesomeIcon
-            style={{
-              height: "42px",
-              color: iconColor,
-              margin: "0px 20px 10px 20px",
-            }}
-            icon={faLaptop}
-          />
-        </Link>
-      ),
-    },
-    {
-      label: "Experience",
-      icon: () => (
-        <Link to="/experience" alt="experience">
-          <FontAwesomeIcon
-            style={{
-              height: "42px",
-              color: iconColor,
-              margin: "0px 20px 10px 20px",
-            }}
-            icon={faStar}
-          />
-        </Link>
-      ),
-    },
-    {
-      label: "Projects",
-      icon: () => (
-        <Link to="/projects" alt="projects">
-          <FontAwesomeIcon
-            style={{
-              height: "42px",
-              color: iconColor,
-              margin: "0px 20px 10px 20px",
-            }}
-            icon={faScrewdriverWrench}
-          />
-        </Link>
-      ),
-    },
-    {
-      label: "Contact",
-      icon: () => (
-        <Link to="/contact" alt="contact">
-          <FontAwesomeIcon
-            style={{
-              height: "42px",
-              color: iconColor,
-              margin: "0px 20px 10px 20px",
-            }}
-            icon={faEnvelope}
-          />
-        </Link>
-      ),
-    },
-  ];
-
-  const socialItems = [
-    {
-      label: "Github",
-      icon: () => (
-        <Link to="/" alt="github">
-          <FontAwesomeIcon
-            style={{
-              height: "42px",
-              color: iconColor,
-              margin: "0px 0px 20px 20px",
-            }}
-            icon={faGithub}
-          />
-        </Link>
-      ),
-    },
-    {
-      label: "Instagram",
-      icon: () => (
-        <Link to="/about" alt="instagram">
-          <FontAwesomeIcon
-            style={{
-              height: "42px",
-              color: iconColor,
-              margin: "20px 0px 20px 20px",
-            }}
-            icon={faInstagram}
-          />
-        </Link>
-      ),
-    },
-    {
-      label: "LinkedIn",
-      icon: () => (
-        <Link to="/skills" alt="linkedin">
-          <FontAwesomeIcon
-            style={{
-              height: "42px",
-              color: iconColor,
-              margin: "20px 0px 20px 20px",
-            }}
-            icon={faLinkedin}
-          />
-        </Link>
-      ),
-    },
-    {
-      label: "Email",
-      icon: () => (
-        <Link to="/experience" alt="email">
-          <FontAwesomeIcon
-            style={{
-              height: "42px",
-              color: iconColor,
-              margin: "20px 0px 20px 20px",
-            }}
-            icon={faEnvelope}
-          />
-        </Link>
-      ),
-    },
-  ];
-
   return (
     <div className={"home-main-container"}>
-      <div className={"left-dock-container"}>
-        <Dock model={socialItems} position={"left"} />
-      </div>
+      <SocialDock />
       <div className={"home-header-container"}>
         <div className={"home-greeting-container"}>
           <div
@@ -252,9 +70,7 @@ const Home = () => {
           style={{ width: "1500px", height: "auto" }}
         />
       </div>
-      <div className={"dock-container"}>
-        <Dock model={navItems} />
-      </div>
+      <NavigationDock />
     </div>
   );
 };
